@@ -159,32 +159,3 @@ p {
     60% { transform: scale(1.2);}
     80% { transform: scale(1);}
 }
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #000000;
-    opacity: 0.6;
-    z-index: 2;
-    user-select: none;
-    margin-top: 2rem;
-
-}
-
-.footer a {
-    color: #001df8;
-    text-decoration: underline;
-    opacity: 0.8;
-}
-
-@media (max-width: 600px) {
-    .container {
-        margin-bottom: 8rem;
-    }
-    .footer {
-        font-size: 1rem;
-    }
-}
