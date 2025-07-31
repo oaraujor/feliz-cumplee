@@ -31,28 +31,28 @@ body {
     50% { opacity: 0.3; }
 }
 
-.floating-cake {
+.moving-cake {
     position: absolute;
     font-size: 2.7rem;
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    filter: drop-shadow(0 2px 8px #fffde4);
-    animation: floatCake 4s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px #fffde4);;
     transition: opacity 0.3s;
+    will-change: left, top;
 }
 
-#cake1 { left: 10vw; top: 15vh; animation-delay: 0s; }
-#cake2 { left: 50vw; top: 10vh; animation-delay: 1s;}
-#cake3 { left: 80vw; top: 18vh; animation-delay: 2s;}
+/*#cake1 { left: 10vw; top: 15vh; animation-delay: 0s; }*/
+/*#cake2 { left: 50vw; top: 10vh; animation-delay: 1s;}*/
+/*#cake3 { left: 80vw; top: 18vh; animation-delay: 2s;}*/
 
-@keyframes floatCake {
-    0%   { transform: translateY(0) scale(1.05) rotate(-10deg);}
-    20%  { transform: translateY(20px) scale(1.08);}
-    50%  { transform: translateY(-20px) scale(1.12) rotate(10deg);}
-    80%  { transform: translateY(24px) scale(1.06);}
-    100% { transform: translateY(0) scale(1.05) rotate(-10deg);}
-}
+/*@keyframes floatCake {*/
+    /*0%   { transform: translateY(0) scale(1.05) rotate(-10deg);}*/
+    /*20%  { transform: translateY(20px) scale(1.08);}*/
+    /*50%  { transform: translateY(-20px) scale(1.12) rotate(10deg);}*/
+    /*80%  { transform: translateY(24px) scale(1.06);}*/
+    /*100% { transform: translateY(0) scale(1.05) rotate(-10deg);}*/
+/*}*/
 
 .cake-easter-egg {
     position: fixed;
@@ -81,9 +81,9 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 2rem;
-    background: rgba(255,255,255,0,0.08);
+    background: rgba(255,255,255,0.28);
     border-radius: 2rem;
-    box-shadow: 0 10 42px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     transition: box-shadow 0.3s;
 }
 
