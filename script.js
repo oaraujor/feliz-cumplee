@@ -82,3 +82,18 @@ document.getElementById('btn-confetti').onclick = function() {
     }, 4000);
 };
 
+document.getElementById('btn-easter').onclick = function() {
+    document.getElementById('easter-egg').style.display = 'block';
+};
+
+document.getElementById('cake').onclick = function() {
+    document.body.style.background = 'radial-gradient(circle at 60% 40%, #ffb6f7 0%, #8fd3f4 100%)';
+    setTimeout(() => {
+        document.body.style.background = 'linear-gradient(135deg, #ff8ec7 0%, #8fd3f4 100%)';
+    }, 2000);
+    alert("¡Te mando un abrazo gigante 🤍 y un pastel virtual! 🎂");
+};
+
+window.addEventListener('resize', () => {
+    createStars();
+});
