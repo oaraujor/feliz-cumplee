@@ -31,6 +31,48 @@ body {
     50% { opacity: 0.3; }
 }
 
+.floating-cake {
+    position: absolute;
+    font-size: 2.7rem;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 2px 8px #fffde4);
+    animation: floatCake 4s ease-in-out infinite;
+    transition: opacity 0.3s;
+}
+
+#cake1 { left: 10vw; top: 15vh; animation-delay: 0s; }
+#cake2 { left: 50vw; top: 10vh; animation-delay: 1s;}
+#cake3 { left: 80vw; top: 18vh; animation-delay: 2s;}
+
+@keyframes floatCake {
+    0%   { transform: translateY(0) scale(1.05) rotate(-10deg);}
+    20%  { transform: translateY(20px) scale(1.08);}
+    50%  { transform: translateY(-20px) scale(1.12) rotate(10deg);}
+    80%  { transform: translateY(24px) scale(1.06);}
+    100% { transform: translateY(0) scale(1.05) rotate(-10deg);}
+}
+
+.cake-easter-egg {
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.19);
+    color: #7c136a;
+    border-radius: 1.4rem;
+    box-shadow: 0 2px 12px #ffe4fa;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    animation: popIn 0.8s both;
+    pointer-events: none;
+}
+
 .container {
     z-index: 1;
     position: absolute;
@@ -65,6 +107,10 @@ p {
     animation: fadeIn 1.8s 0.4s both;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
 
 .btn {
     display: inline-block;

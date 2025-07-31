@@ -4,7 +4,7 @@ function createStars() {
     for(let i=0; i<80; i++) {
         const star = document.createElement('div');
         star.className = 'star';
-        const size = Math.random() * 2 + 1;
+        const size = Math.random() * 7 + 1;
         star.style.width = star.style.height = size + 'px';
         star.style.top = Math.random() * 100 + 'vh';
         star.style.left = Math.random() * 100 + 'vw';
@@ -92,6 +92,41 @@ document.getElementById('cake').onclick = function() {
         document.body.style.background = 'linear-gradient(135deg, #ff8ec7 0%, #8fd3f4 100%)';
     }, 2000);
     alert("¡Te mando un abrazo gigante 🤍 y un pastel virtual! 🎂");
+};
+
+const cakeEasterEggs = [
+    "Cupon valido para una salida 🎫",
+    "Cupon valido para un cafe ☕",
+    "Cupon valido para un pastel real 🍰"
+];
+
+function showCakeEasterEgg(message) {
+    const popup = document.getElementById('cake-easter-egg');
+    popup.innerText = message;
+    popup.style.display = 'block';
+    popup.style.opacity = '1';
+    setTimeout(() => {
+        popup.style.opacity = '0';
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 400);
+    }, 2600);
+}
+
+document.getElementById('cake1').onclick = function() {
+    showCakeEasterEgg(cakeEasterEggs[0]);
+    this.style.opacity = '0';
+    this.style.pointerEvents = 'none';
+};
+document.getElementById('cake2').onclick = function() {
+    showCakeEasterEgg(cakeEasterEggs[1]);
+    this.style.opacity = '0';
+    this.style.pointerEvents = 'none';
+};
+document.getElementById('cake3').onclick = function() {
+    showCakeEasterEgg(cakeEasterEggs[2]);
+    this.style.opacity = '0';
+    this.style.pointerEvents = 'none';
 };
 
 window.addEventListener('resize', () => {
