@@ -89,17 +89,23 @@ p {
     box-shadow: 0 5px 16px #8fd3f4;
 }
 
-/* Responsive test */
-@media (max-width: 600px) {
-    body {
-        padding: 1rem;
-    }
 
-    h1 {
-        font-size: 2rem;
-    }
 
-    .container {
-        padding: 1rem;
-    }
+
+.footer {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.6;
+    z-index: 2;
+    user-select: none;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0.8;
 }
