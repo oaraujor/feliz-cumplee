@@ -42,18 +42,6 @@ body {
     will-change: left, top;
 }
 
-/*#cake1 { left: 10vw; top: 15vh; animation-delay: 0s; }*/
-/*#cake2 { left: 50vw; top: 10vh; animation-delay: 1s;}*/
-/*#cake3 { left: 80vw; top: 18vh; animation-delay: 2s;}*/
-
-/*@keyframes floatCake {*/
-    /*0%   { transform: translateY(0) scale(1.05) rotate(-10deg);}*/
-    /*20%  { transform: translateY(20px) scale(1.08);}*/
-    /*50%  { transform: translateY(-20px) scale(1.12) rotate(10deg);}*/
-    /*80%  { transform: translateY(24px) scale(1.06);}*/
-    /*100% { transform: translateY(0) scale(1.05) rotate(-10deg);}*/
-/*}*/
-
 .cake-easter-egg {
     position: fixed;
     left: 50%;
@@ -173,15 +161,17 @@ p {
 }
 
 .footer {
-    position: static;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #000000;
     opacity: 0.6;
     z-index: 2;
     user-select: none;
     margin-top: 2rem;
+
 }
 
 .footer a {
